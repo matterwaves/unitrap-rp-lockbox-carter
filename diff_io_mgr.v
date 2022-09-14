@@ -1,35 +1,25 @@
-`timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 11/14/2019 12:11:14 PM
-// Design Name: 
-// Module Name: diff_io_mgr
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
+/*
+ Copyright 2022 Carter Turnbaugh
 
+ Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+ The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+
+`timescale 1ns / 1ps
 
 module diff_io_mgr #(
-    parameter integer OUTPUT_WIDTH = 1,
-    parameter integer INOUT_WIDTH = 8
-    )
-    (
+					 parameter integer OUTPUT_WIDTH = 1,
+					 parameter integer INOUT_WIDTH = 8
+					 )
+   (
     input [OUTPUT_WIDTH-1:0] din,
-    inout [INOUT_WIDTH-1:0] dout_p,
-    inout [INOUT_WIDTH-1:0] dout_n
+    inout [INOUT_WIDTH-1:0]	 dout_p,
+    inout [INOUT_WIDTH-1:0]	 dout_n
     );
-    
-    assign dout_p = {{INOUT_WIDTH-OUTPUT_WIDTH{1'b0}}, din};
-    assign dout_n = ~{{INOUT_WIDTH-OUTPUT_WIDTH{1'b0}}, din};
+   
+   assign dout_p = {{INOUT_WIDTH-OUTPUT_WIDTH{1'b0}}, din};
+   assign dout_n = ~{{INOUT_WIDTH-OUTPUT_WIDTH{1'b0}}, din};
 endmodule

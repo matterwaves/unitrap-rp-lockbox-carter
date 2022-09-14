@@ -1,44 +1,34 @@
-`timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 11/14/2019 12:11:14 PM
-// Design Name: 
-// Module Name: diff_io_mgr
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
+/*
+ Copyright 2022 Carter Turnbaugh
 
+ Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+ The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+
+`timescale 1ns / 1ps
 
 module dac_splitter #
   (
    parameter integer DATA_WIDTH = 14
    )
    (
-	input 					clk,
-	input 					rst,
-	input 					dac_clk_i,
-	input 					dac_wrt_i,
-    input [DATA_WIDTH-1:0] 	din_a,
-    input [DATA_WIDTH-1:0] 	din_b,
-    output 					dac_clk_o,
-    output 					dac_wrt_o,
-    output 					dac_sel_o,
-    output 					dac_rst_o,
-	output [DATA_WIDTH-1:0] dout
+	input					clk,
+	input					rst,
+	input					dac_clk_i,
+	input					dac_wrt_i,
+    input [DATA_WIDTH-1:0]	din_a,
+    input [DATA_WIDTH-1:0]	din_b,
+    output					dac_clk_o,
+    output					dac_wrt_o,
+    output					dac_sel_o,
+    output					dac_rst_o,
+	output [DATA_WIDTH-1:0]	dout
     );
 
-   reg [DATA_WIDTH-1:0] 	din_a_reg, din_b_reg;
+   reg [DATA_WIDTH-1:0]		din_a_reg, din_b_reg;
    always @(posedge clk) begin
 	  din_a_reg <= din_a;
 	  din_b_reg <= din_b;
