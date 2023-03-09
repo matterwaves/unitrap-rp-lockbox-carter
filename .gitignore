@@ -4,6 +4,6 @@
 
 # Vivado log and temporary files
 /.Xil/
-/vivado.log
-/vivado.jou
+/vivado*.log
+/vivado*.jou
 /vivado_*.str
