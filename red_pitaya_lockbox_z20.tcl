@@ -1,5 +1,5 @@
 # Set the project name
-set _xil_proj_name_ "red_pitaya_lockbox"
+set _xil_proj_name_ "red_pitaya_lockbox_z20"
 
 variable script_file
 set script_file "red_pitaya_lockbox_z20.tcl"

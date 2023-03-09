@@ -1,0 +1,9 @@
+# Vivado projects
+/red_pitaya_lockbox/
+/red_pitaya_lockbox_z20/
+
+# Vivado log and temporary files
+/.Xil/
+/vivado.log
+/vivado.jou
+/vivado_*.str
