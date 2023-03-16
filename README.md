@@ -1,8 +1,8 @@
 # unitrap-rp-lockbox-carter
 
-FPGA gateware for Red Pitaya implementing a PI lockbox, forked from Carter Turnbaugh's [Red Pitaya Lockbox](https://gitlab.com/carterturn/red_pitaya_lockbox) project.
+FPGA gateware for Red Pitaya implementing a PI lockbox, forked from Carter Turnbaugh's [`Red Pitaya Lockbox`](https://gitlab.com/carterturn/red_pitaya_lockbox) project.
 
-The corresponding server software is found at [unitrap-rp-lockbox-carter-server](https://github.com/matterwaves/unitrap-rp-lockbox-carter-server).
+The corresponding server software is found at [`unitrap-rp-lockbox-carter-server`](https://github.com/matterwaves/unitrap-rp-lockbox-carter-server).
 
 Last tested with Vivado ML Standard 2021.2 on Ubuntu 20.04.05 LTS.
 
