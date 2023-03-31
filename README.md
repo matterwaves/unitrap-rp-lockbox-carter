@@ -16,8 +16,8 @@ Work in progress.
 
 ```
 sudo -i
-cd <repository_directory>
-./scripts/<install_script>
+cd <repository_directory>/scripts
+. <install_script>
 exit
 ```
 
